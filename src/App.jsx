@@ -8,7 +8,7 @@ import './App.css'
 
 // Componente del auto cargado desde modelo .glb y controlado por teclas
 function Auto({ modelRef, keys, isGameOver }) {
-  const gltf = useLoader(GLTFLoader, '/models/auto.glb')
+  const gltf = useLoader(GLTFLoader, `${import.meta.env.BASE_URL}models/auto.glb`); // <-- Modifica esta línea
 
   useFrame((_, delta) => {
     if (!modelRef.current || isGameOver) return
@@ -265,8 +265,8 @@ function App() {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/choque.mp3" preload="auto" />
-      <audio ref={musicRef} src="/audio/music1.mp3" preload="auto" loop />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL}audio/choque.mp3`} preload="auto" />
+      <audio ref={musicRef} src={`${import.meta.env.BASE_URL}audio/music1.mp3`} preload="auto" loop />
       <Canvas shadows camera={{ position: [0, 3, 8], fov: 60 }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 10, 5]} intensity={1} castShadow />

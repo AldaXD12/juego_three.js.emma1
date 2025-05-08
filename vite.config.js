@@ -1,9 +1,15 @@
+// vite.config.js
 import { defineConfig } from 'vite';
-// ... otros imports
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: 'juego_three.js.emma1',
-  plugins: [
-    // ... tus plugins
-  ],
+  plugins: [react()],
+  base: '/juego_three.js.emma1/',
+  build: {
+    rollupOptions: {
+      output: {
+        format: 'es', // Asegúrate de que el formato sea 'es' para ESM
+      },
+    },
+  },
 });

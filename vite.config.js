@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: 'juego_three.js.emma1', // Muy importante para que funcione correctamente en producción (por ejemplo en GitHub Pages)
   build: {
-    outDir: 'dist',
+    //outDir: 'dist',
   },
 })

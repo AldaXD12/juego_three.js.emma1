@@ -1,0 +1,53 @@
+/* App.css */
+
+/* Hacer que el body no se expanda infinito */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #111; /* Opcional: fondo oscuro elegante */
+}
+
+/* Ajuste del contenedor principal del Canvas */
+canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 1000px; /* Tamaño máximo para desktop */
+  width: 100%;
+  height: auto;
+}
+
+/* HUD: interfaz de botones */
+.hud {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Botones */
+button {
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00aaff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0088cc;
+}
+
+/* Mensajes (Colisiones, Ganador, etc.) */
+.message {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+}
